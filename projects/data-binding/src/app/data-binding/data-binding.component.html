@@ -1,0 +1,15 @@
+<section>
+    <article>
+        <h3>Interpolação</h3>
+        <p>String renderizada com interpolação: {{ url }}</p>
+        <p>Operação matemática em uma interpolação: {{ 1 + 1 }}</p>
+        <p>Retorno de uma função em uma interpolação: {{ getValor() }}</p>
+        <p>Operação lógica em uma interpolação: {{ getBoolean() && false }}</p>
+        <p>Atributos de tags HTML recebendo interpolação: <img src="{{ urlImagem }}"></p>
+    </article>
+    <article>
+        <h3>Property binding</h3>
+        <img [src]="urlImagem">
+        <img bind-src="urlImagem">
+    </article>
+</section>
