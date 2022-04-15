@@ -27,6 +27,7 @@
               "projects/data-binding/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "projects/data-binding/src/styles.css"
             ],
             "scripts": []
