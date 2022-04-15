@@ -43,13 +43,23 @@
         </div>
         <br><br>
         <input #campoInput type="text" (keyup)="onKeyUp(campoInput.value)" (keyup.enter)="salvarValor(campoInput.value)"
-        (blur)="salvarValor(campoInput.value)">
+            (blur)="salvarValor(campoInput.value)">
         <p>Valor atual: {{ valorAtual }}</p>
         <p>Valor salvo: {{ valorSalvo }}</p>
         <br><br>
-        <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()"
-        [class.highlight]="isMouseOver">
+        <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver">
             Passe o mouse sobre mim
         </span>
+    </article>
+    <article>
+        <h3>Two way data binding</h3>
+        <div>
+            <input type="text" [(ngModel)]="nome" />
+        </div>
+        <div>
+            <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} de idade</p>
+            <input type="text" [(ngModel)]="pessoa.nome">
+            <input type="text" [(ngModel)]="pessoa.idade">
+        </div>
     </article>
 </section>
