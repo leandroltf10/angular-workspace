@@ -9,6 +9,9 @@ export class DataBindingComponent implements OnInit {
 
   url: string = 'http://loiane.com';
   urlImagem: string = 'http://lorempixel.com.br/100/100/?1';
+  valorAtual: string = '';
+  valorSalvo: string | undefined = '';
+  isMouseOver: boolean = false;
 
   constructor() { }
 
@@ -21,6 +24,22 @@ export class DataBindingComponent implements OnInit {
 
   getBoolean(): boolean {
     return true;
+  }
+
+  botaoClicado() {
+    alert('botão clicado');
+  }
+
+  onKeyUp(valor: string) {
+    this.valorAtual = valor;
+  }
+
+  salvarValor(valor: string) {
+    this.valorSalvo = valor;
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
   }
 
 }
